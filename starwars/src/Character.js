@@ -33,6 +33,9 @@ const Character = function Character(props) {
                 <p>
                 HEIGHT:{element.height}
                 </p>
+                <p>
+                    {element['eye_color']} eyed
+                </p>
             </CharacterStyle>)
         }
         </>
