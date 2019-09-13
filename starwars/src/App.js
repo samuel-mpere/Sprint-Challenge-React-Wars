@@ -5,7 +5,7 @@ import './App.css';
 import Character from './Character';
 
 const starwarsApi = 'https://swapi.co/api/people/';
-const backupApi = 'https://lambda-github-api-server.herokuapp.com/';
+// const backupApi = 'https://lambda-github-api-server.herokuapp.com/';
 
 console.log(starwarsApi);
 
@@ -39,9 +39,9 @@ function App () {
   `;
   
   const [stars, setStars] = useState([]);
-
+  
   useEffect(() => {
-    axios.get(backupApi)
+    axios.get(starwarsApi)
     .then(response => {
       setStars(response.data.results)
     })
@@ -54,7 +54,7 @@ function App () {
     <Container className="App">
       <h1 className="Header">React Wars</h1>
       <NewInfo>
-        <Character array={stars}/>
+        <Character character={stars}/>
       </NewInfo>
       <footer>
           <TheForce>MAY THE FORCE BE WITH YOU</TheForce>

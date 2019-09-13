@@ -2,7 +2,6 @@ import React from "react";
 import styled from 'styled-components';
 
 const CharacterStyle = styled.div`
-    // text-align: center;
     padding-bottom: 300px;
     h3{
         color: white;
@@ -22,11 +21,11 @@ const CharacterStyle = styled.div`
 
 const Character = function Character(props) {
     
-    const {array} = props;
+    const {character} = props;
     return (
         <>
         {
-            array.map((element) => 
+            character.map((element) => 
             <CharacterStyle>
                 <h3> {element.name} 
                 </h3> 
