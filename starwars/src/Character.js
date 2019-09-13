@@ -2,9 +2,9 @@ import React from "react";
 import styled from 'styled-components';
 
 const CharacterStyle = styled.div`
-    text-align: center;
-    // padding-left: 40px;
-    h2{
+    // text-align: center;
+    padding-bottom: 300px;
+    h3{
         color: white;
     }
     p {
@@ -12,15 +12,13 @@ const CharacterStyle = styled.div`
         opacity: 0.2;
 
         &:hover{
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: bold;
             opacity: 1;
             cursor: pointer;
         }
     }
-    `
-
-
+    `;
 
 const Character = function Character(props) {
     
@@ -30,8 +28,8 @@ const Character = function Character(props) {
         {
             array.map((element) => 
             <CharacterStyle>
-                <h2> {element.name} 
-                </h2> 
+                <h3> {element.name} 
+                </h3> 
                
                 <p>
                 HEIGHT:{element.height}

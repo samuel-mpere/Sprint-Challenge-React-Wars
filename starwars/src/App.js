@@ -29,7 +29,7 @@ function App () {
     `
     ;
   const TheForce = styled.div`
-    padding-top: 300px;
+    padding-top: 30px;
     font-size: 2rem;
     &:hover{
       font-size: 4rem;
