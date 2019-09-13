@@ -17,6 +17,27 @@ function App () {
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
 
+  const Container = styled.div`
+   display: flex;
+   flex-direction: column;
+  //  width: 800px;
+  `
+  ;
+  const NewInfo = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    `
+    ;
+  const TheForce = styled.div`
+    padding-top: 300px;
+    font-size: 2rem;
+    &:hover{
+      font-size: 4rem;
+      font-weight: bolder;
+    }
+  
+  `;
+  
   const [stars, setStars] = useState([]);
 
   useEffect(() => {
@@ -30,10 +51,15 @@ function App () {
   }, []);
 
   return (
-    <div className="App">
+    <Container className="App">
       <h1 className="Header">React Wars</h1>
-      <Character array={stars}/>
-    </div>
+      <NewInfo>
+        <Character array={stars}/>
+      </NewInfo>
+      <footer>
+          <TheForce>MAY THE FORCE BE WITH YOU</TheForce>
+      </footer>
+    </Container>
   );
 }
 
