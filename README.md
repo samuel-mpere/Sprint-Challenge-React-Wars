@@ -18,7 +18,7 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 
 ## Description
 
-In this challenge, create a web page that presents a styled list of Star Wars characters. Being able to render out data to a web page is a large part of what JavaScript developers do, this challenge assesses your ability to achieve such a task.
+In this challenge, create a web page that presents a `styled list of Star Wars characters`. Being able to render out data to a web page is a large part of what JavaScript developers do, this challenge assesses your ability to achieve such a task.
 
 ## Self-Study/Essay Questions
 
@@ -26,13 +26,30 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+React is a UI library that is used in various forms to create complex, rich user interfaces. Working as the View in Model-View-Controller design pattern, React builds small, reusable pieces of UI that can be easily put together to make large applications.
+React opts for simplicity and efficiency by rendering the selected part/component of your page. The chosen component is determined by the page’s current state. This option allows for easier readability and debugging.
+React being a component-based library, allows developers to pass rich syntax into the page with JavaScript into components, while avoiding it getting rendered in the DOM.
+React favours flexibility, is reusable and is compatible with other libraries and different stacks. It allows for components in other plugins and can be added to any technology stack.
+
 - [ ] What does it mean to _think_ in react?
+
+Starting your project by first envisioning the design patterns; by seeing your app as components and sub components. Separate your UI model into components which will likely match your data model.
+The next stage involves determining where to inject your state or slices of state as well as its methods. It is usually prudent and preferable to place them in a parent component. This easily allows any child or grand-child component to access the state and also allows for flexibility.
+The final stage involves adding the needed data into the hierarchy that updates the component(s) whenever there is change in state via props.
 
 - [ ] Describe state.
 
+In the React sense, `state`is an object that represents the parts of the app that can change. Each component can maintain its own state,which lives in an object called `this.state`.
+Simply put, if you’d like your app to do anything – if you want interactivity, adding and deleting things, logging in and out – that will involve state.
+
 - [ ] Describe props.
 
+props and state are both plain JavaScript objects. While both hold information that influences the output of render, they are different in one important way: props get passed to the component (similar to function parameters).
+
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+
+A side effect is anything that affects something outside the scope of the function being executed. Fetching data from an API, timers, logging, and manually manipulating the DOM are all examples of side effects. There are two categories of side effects in React components - those that don’t require clean-up and those that do require cleanup.
+In React we can use `useEffect` you tell React that your component needs to do something after render. React will remember the function you passed and call it later after performing the DOM updates.
 
 ## Project Set Up
 
