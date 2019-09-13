@@ -18,7 +18,6 @@ function App () {
   // sync up with, if any.
 
   const [stars, setStars] = useState([]);
-  const [character, setCharacter] = useState([]);
 
   useEffect(() => {
     axios.get(backupApi)
@@ -30,12 +29,10 @@ function App () {
     });
   }, []);
 
-
-  // const{name, height} = setCharacter;
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      <Character/>
+      <Character array={stars}/>
     </div>
   );
 }

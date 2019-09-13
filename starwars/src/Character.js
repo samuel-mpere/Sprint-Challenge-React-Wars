@@ -6,7 +6,7 @@ const Character = function Character(props) {
     return (
         <>
         {
-            array.map((a,b) => <div key={a}> name={b.name} height={b.height}</div>)
+            array.map((element) => <div>name {element.name} height {element.height}</div>)
         }
         </>
     )
